@@ -19,13 +19,13 @@ def vnnlib_template_2(eps_in):
 
     # neural network declaration
     lines.append("(declare-network f")
-    lines.append("    (declare-input X_f float32 [5])")
-    lines.append("    (declare-output Y_f float32 [5])")
+    lines.append("    (declare-input X_f real [5])")
+    lines.append("    (declare-output Y_f real [5])")
     lines.append(")")
     lines.append("(declare-network g")
     lines.append("    (isomorphic-to f)")
-    lines.append("    (declare-input X_g float32 [5])")
-    lines.append("    (declare-output Y_g float32 [5])")
+    lines.append("    (declare-input X_g real [5])")
+    lines.append("    (declare-output Y_g real [5])")
     lines.append(")")
     lines.append("")
 
