@@ -3,7 +3,6 @@ from python_scripts.create_specifications import vnnlib_template_2
 import random
 import sys
 
-
 def main():
     if len(sys.argv) != 2:
         print("Usage: python generate_properties.py <random_seed>")
