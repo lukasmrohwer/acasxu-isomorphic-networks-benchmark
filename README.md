@@ -7,3 +7,5 @@ Each network has 6 hidden layers with 50 nodes each, forming a modest 300 nodes.
 To ensure accuracy is retained, equivalence verification is used. Once the pruned network has been reconstructed to be isometric with the original, each network is given the same input tensor and the distance of the outputs is measured. If the distance is smaller or equal to the selected epsilon - the networks are equal. If the distance is greater than the selected epsilon then they are not equivalent.
 
 This process has been named VeriPrune and is demonstrated in this VNN-LIB 2.0 benchmark. The input constraints are set to any possible input and if there is any possible input such that the output distance is greater than the epsilon then the specification is unsatisfied.
+
+These benchmarks were compiled using networks and specifications from [Samuel Teuber](https://teuber.dev/).
