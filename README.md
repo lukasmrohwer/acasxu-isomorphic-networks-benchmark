@@ -4,7 +4,7 @@ The Unmanned Aerial Vehicle Collision Avoidance System X (ACAS Xu) consists of 4
 
 Each network has 6 hidden layers with 50 nodes each, forming a modest 300 nodes. However, on an unmanned aircraft with limited computing power it is of interest to reduce the size of such neural networks to make fast calculations while retaining accuracy. This can be achieved using various node pruning techniques such as weight pruning, node pruning, and quantization.
 
-To ensure accuracy is retained, equivalence verification is used. Once the pruned network has been reconstructed to be isometric with the original, each network is given the same input tensor and the distance of the outputs is measured. If the distance is smaller or equal to the selected epsilon - the networks are equal. If the distance is greater than the selected epsilon then they are not equivalent.
+To ensure accuracy is retained, equivalence verification is used. Once the pruned network has been reconstructed to be isomorphic with the original, each network is given the same input tensor and the distance of the outputs is measured. If the distance is smaller or equal to the selected epsilon - the networks are equal. If the distance is greater than the selected epsilon then they are not equivalent.
 
 This process has been named VeriPrune and is demonstrated in this VNN-LIB 2.0 benchmark. The input constraints are set to any possible input and if there is any possible input such that the output distance is greater than the epsilon then the specification is unsatisfied.
 
