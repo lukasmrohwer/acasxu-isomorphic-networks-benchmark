@@ -27,7 +27,7 @@ def main():
     lines = vnnlib_template_2(EPS)
     for i in range(5):
 
-        vnnlib_filename = f"./vnnlib/instance_{i}.vnnlib2"
+        vnnlib_filename = f"./vnnlib/instance_{i}.vnnlib"
         with open(vnnlib_filename, "w") as f:
             f.writelines(line + "\n" for line in lines)
 
