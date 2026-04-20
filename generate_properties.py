@@ -19,8 +19,6 @@ def main():
     # create VNN-LIB 2.0 files given the following:
     EPS = 0.05              # size of the input pertubation
     VNN_COMP_TIMEOUT = 100  # per-instance verification timeout
-    # ONNX_MODEL_PATH = "onnx/ACASXU_run2a_1_1_batch_2000.onnx"
-    # PRUNED_ONNX_MODEL_PATH = "onnx/ACASXU_run2a_1_1_batch_2000_pruned10.onnx"
 
     i = 0
     instance_data = []
