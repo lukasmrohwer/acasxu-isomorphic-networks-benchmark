@@ -19,22 +19,23 @@ def main():
     # create VNN-LIB 2.0 files given the following:
     EPS = 0.05              # size of the input pertubation
     VNN_COMP_TIMEOUT = 100  # per-instance verification timeout
+    num_instances = 10
 
     i = 0
     instance_data = []
     lines = vnnlib_template_2(EPS)
-    for i in range(5):
+    for ix in range(num_instances):
 
-        vnnlib_filename = f"./vnnlib/instance_{i}.vnnlib"
+        vnnlib_filename = f"./vnnlib/instance_{ix}.vnnlib"
         with open(vnnlib_filename, "w") as f:
             f.writelines(line + "\n" for line in lines)
 
         i = random.randint(1, 5)
         j = random.randint(1, 9)
-        k = random.randrange(5, 10, 30)
+        k = random.choice([5, 10, 30])
 
         ONNX_MODEL_PATH = f"onnx/nets/ACASXU_run2a_{i}_{j}_batch_2000.onnx"
-        PRUNED_ONNX_MODEL_PATH = f"onnx/pruned_nets/ACASXU_run2a_{i}_{j}_batch_2000_pruned{k}.onnx"
+        PRUNED_ONNX_MODEL_PATH = f"onnx/nets_pruned/ACASXU_run2a_{i}_{j}_batch_2000_pruned{k}.onnx"
 
         instance = [[("f", ONNX_MODEL_PATH),("g", PRUNED_ONNX_MODEL_PATH)], vnnlib_filename, VNN_COMP_TIMEOUT]
         instance_data.append(instance)
