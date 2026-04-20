@@ -6,6 +6,14 @@ Each network has 6 hidden layers with 50 nodes each, forming a modest 300 nodes.
 
 To ensure accuracy is retained, equivalence verification is used. Once the pruned network has been reconstructed to be isomorphic with the original, each network is given the same input tensor and the distance of the outputs is measured. If the distance is smaller or equal to the selected epsilon - the networks are equal. If the distance is greater than the selected epsilon then they are not equivalent.
 
-This process has been named VeriPrune and is demonstrated in this VNN-LIB 2.0 benchmark. The input constraints are set to any possible input and if there is any possible input such that the output distance is greater than the epsilon then the specification is unsatisfied.
+This process has been named VeriPrune and is demonstrated in this VNN-LIB 2.0 benchmark. The input constraints are set to any possible input and if there is any possible input such that the output distance is greater than the epsilon then the specification is satisfied.
 
-These benchmarks were compiled using networks and specifications from [Samuel Teuber](https://teuber.dev/).
+## References
+
+These benchmarks were compiled using networks and specifications provided by [Samuel Teuber](https://teuber.dev/) using the original networks and descriptions from the sources below.
+
+Wang, W., Wang, K., Cheng, Z., & Yang, Y. (2024). VeriPrune: Equivalence verification of node pruned neural network. Neurocomputing (Amsterdam), 577, Article 127347. https://doi.org/10.1016/j.neucom.2024.127347
+
+Kleine Büning, M., Kern, P., & Sinz, C. (2020). Verifying Equivalence Properties of Neural Networks with ReLU Activation Functions. In Principles and Practice of Constraint Programming - 26th International Conference, CP 2020, Proceedings (Vol. 12333, pp. 868–884). https://doi.org/10.1007/978-3-030-58475-7_50
+
+Paulsen, B., Wang, J., & Wang, C. (2020, June 27). ReluDiff: differential verification of deep neural networks. 2020 IEEE/ACM 42nd International Conference on Software Engineering (ICSE), Article 3380337. https://doi.org/10.1145/3377811.3380337
