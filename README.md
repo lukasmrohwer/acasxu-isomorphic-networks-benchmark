@@ -1,4 +1,4 @@
-# ACAS Xu Benchmark
+# ACAS Xu Isomorphic Networks Benchmark
 
 The Unmanned Aerial Vehicle Collision Avoidance System X (ACAS Xu) consists of 45 deep neural networks that used to determine the best course of action for an unmanned aircraft in proximity with another aircraft, to avoid collisions. Each neural network takes in five inputs: the distance between the aircrafts, the relative angle of each aircraft, and the speed of each aircraft. The output is another array of five integers giving a score to five different actions: weak left turn, strong left turn, weak right turn, strong right turn, or clear out of conflict. The action with the lowest score is the recommended action.
 
