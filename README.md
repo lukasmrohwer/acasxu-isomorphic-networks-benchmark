@@ -1,5 +1,7 @@
 # ACAS Xu Isomorphic Networks Benchmark
 
+This repository contains the ACAS Xu isomorphic networks benchmark for VNNCOMP 2026 (Verification of Neural Networks Competition).
+
 ## Overview
 This repository contains the ACAS Xu Isomorphic Networks Benchmark, which is designed to evaluate neural network verification tools. It focuses on checking the bounds of differences between an original ACAS Xu neural network and a perturbed (isomorphic) version of the same network. The benchmark applies a small uniform perturbation to the network weights (`P = 0.001`) and tests whether the outputs of the two networks remain within a specified distance (`EPS = 0.05`).
 
